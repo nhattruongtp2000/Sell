@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sell.Data\Sell.Data.csproj" />
+    <ProjectReference Include="..\Sell.Infrastructure\Sell.Infrastructure.csproj" />
+    <ProjectReference Include="..\Sell.Utilities\Sell.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
