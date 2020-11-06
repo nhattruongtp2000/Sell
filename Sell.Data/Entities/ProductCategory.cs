@@ -28,6 +28,8 @@ namespace Sell.Data.Entities
 
         public bool? HomeFlag { get; set; }
 
+        public int SortOrder { set; get; }
+
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
         public int SorOrder { set; get; }
