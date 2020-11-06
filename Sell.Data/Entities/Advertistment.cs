@@ -24,7 +24,7 @@ namespace Sell.Data.Entities
         public string PositionId { get; set; }
 
         public Status Status {get;set;}
-        public int SorOrder {get;set;}
+        public int SortOrder {get;set;}
         public DateTime DateCreated {get;set;}
         public DateTime DateModified {get;set;}
 

@@ -24,6 +24,7 @@ namespace Sell.Data.Entities
 
 
         public Status Status {get;set;}
-        public int SortOrder {get;set;}
+      
+        public int SortOrder { get; set; }
     }
 }
