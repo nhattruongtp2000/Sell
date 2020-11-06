@@ -11,7 +11,7 @@ using System.Text;
 namespace Sell.Data.Entities
 {
     [Table("Products")]
-    class Product : DomainEntity<int>, ISwitchable, IDateTracking, IHasSeoMetaData
+    public class Product : DomainEntity<int>, ISwitchable, IDateTracking, IHasSeoMetaData
     {
         [StringLength(255)]
         [Required]
@@ -49,12 +49,9 @@ namespace Sell.Data.Entities
         [StringLength(255)]
         public string Unit { get; set; }
 
-        [ForeignKey("CategoryId")]
-        public virtual ProductCategory ProductCategory { set; get; }
-
         public string SeoPageTitle { set; get; }
 
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar(50)")]
         [StringLength(255)]
         public string SeoAlias { set; get; }
 
@@ -69,5 +66,15 @@ namespace Sell.Data.Entities
 
         public Status Status { set; get; }
         
+        public virtual ICollection<BillDetail> BillDetails { get; set; }
+
+        public virtual ICollection<ProductImage> ProductImages { get; set; }
+
+        public virtual ICollection<ProductTag> ProductTag { get; set; }
+
+        public virtual ICollection<WholePrice> WholePrices { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public virtual ProductCategory ProductCategory { set; get; }
     }
 }

@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Sell.Data.Entities
 {
-    class ProductCategory : DomainEntity<int>,
+    public class ProductCategory : DomainEntity<int>,
         IHasSeoMetaData, ISwitchable, ISortable, IDateTracking
     {
         public ProductCategory()
